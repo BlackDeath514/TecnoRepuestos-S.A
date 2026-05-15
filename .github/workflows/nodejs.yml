@@ -4,36 +4,19 @@ on:
   push:
     branches: [ main ]
 
-  pull_request:
-    branches: [ main ]
-
 jobs:
   build:
 
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [18.x]
-
     steps:
 
-    - name: Clonar repositorio
-      uses: actions/checkout@v4
+    - uses: actions/checkout@v4
 
-    - name: Instalar Node.js
-      uses: actions/setup-node@v4
+    - uses: actions/setup-node@v4
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: 18
 
-    - name: Instalar dependencias
-      run: npm install
+    - run: npm install
 
-    - name: Reinstalar Jest
-      run: npm install jest --save-dev
-
-    - name: Dar permisos a Jest
-      run: chmod +x ./node_modules/.bin/jest
-
-    - name: Ejecutar pruebas
-      run: npx jest
+    - run: npm test
