@@ -1,0 +1,32 @@
+{
+  "name": "tecnorepuestos-s.a",
+  "version": "1.0.0",
+  "description": "Repositorio destinado al desarrollo del sistema web de gestión de inventario, compras y ventas para la empresa TecnoRepuestos S.A.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BlackDeath514/TecnoRepuestos-S.A.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/BlackDeath514/TecnoRepuestos-S.A/issues"
+  },
+  "homepage": "https://github.com/BlackDeath514/TecnoRepuestos-S.A#readme",
+  "devDependencies": {
+    "jest": "^30.4.2"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "supertest": "^7.2.2"
+  }
+}
